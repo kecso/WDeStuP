@@ -36,4 +36,5 @@ services:
       - 8888:8888
     volumes:
       - ${BASE_DIR}/src:/usr/app/src
+      - ${BASE_DIR}/test:/usr/app/test
   

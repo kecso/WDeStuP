@@ -15,12 +15,12 @@
     "webgme": "node ./node_modules/webgme-cli/bin/webgme"
   },
   "version": "1.0.0",
-  "peerDependencies": {
-    "webgme": "^2.23.0"
-  },
   "devDependencies": {
-    "mocha": "^5.2.0",
-    "webgme": "^2.23.0"
+    "mocha": "^5.2.0"
   },
-  "dependencies": {}
+  "dependencies": {
+    "webgme": "latest",
+    "webgme-bindings": "latest",
+    "webgme-cli": "latest"
+  }
 }

@@ -10,13 +10,14 @@ The easiest way to start using this project is to fork it in git. Alternatively,
 - clone the repository
 - edit the '.env' file so that the BASE_DIR variable points to the main repository directory
 - `docker-compose up -d`
+- connect to your server at http://localhost:8888
 
 ## Main docker commands
 All of the following commands should be used from your main project directory (where this file also should be):
 - To **rebuild** the complete solution `docker-compose build` (and follow with the `docker-compose up -d` to restart the server)
 - To **debug** using the logs of the WebGME service `docker-compose logs webgme`
 - To **stop** the server just use `docker-compose stop`
-- To **enter** the WebGME container and use WebGME commands `docker-compose exec webgme bash` 
+- To **enter** the WebGME container and use WebGME commands `docker-compose exec webgme bash` (you can exit by simply closing the command line with linux command 'exit') 
 ## Using WebGME commands to add components to your project
 In general, you can use any WebGME commands after you successfully entered the WebGME container. It is important to note that only the src directory is shared between the container and the host machine, so you need to additionally synchronize some files after finishing your changes inside the container! The following is few scenarios that frequently occur:
 ### Adding new npm dependency

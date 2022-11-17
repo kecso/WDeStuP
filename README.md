@@ -27,6 +27,8 @@ When you need to install a new library you should follow these steps:
 - `npm i -s yourNewPackageName`
 - exit the container
 - copy the package.json file `docker-compose cp webgme:/usr/app/package.json package.json`
+
+Alternatively, run the 'add_npm_package.bat(sh)' and follow instructions.
 ### Adding new interpreter/plugin to your DS
 Follow these steps to add a new plugin:
 - enter the container
@@ -35,6 +37,8 @@ Follow these steps to add a new plugin:
 - exit container
 - copy webgme-setup.json `docker-compose cp webgme:/usr/app/webgme-setup.json webgme-setup.json`
 - copy webgme-config `docker-compose cp webgme:/usr/app/config/config.webgme.js config/config.webgme.js`
+
+Alternatively, run the 'create_plugin.bat(sh)' and follow instructions.
 ### Adding new visualizer to your DS
 Follow these steps to add a new visualizer:
 - enter the container
@@ -42,6 +46,8 @@ Follow these steps to add a new visualizer:
 - exit container
 - copy webgme-setup.json `docker-compose cp webgme:/usr/app/webgme-setup.json webgme-setup.json`
 - copy webgme-config `docker-compose cp webgme:/usr/app/config/config.webgme.js config/config.webgme.js`
+
+Alternatively, run the 'create_visualizer.bat(sh)' and follow instructions.
 ### Adding new seed to your DS
 Follow these steps to add a new seed based on an existing project in your server:
 - enter the container
@@ -49,3 +55,5 @@ Follow these steps to add a new seed based on an existing project in your server
 - exit container
 - copy webgme-setup.json `docker-compose cp webgme:/usr/app/webgme-setup.json webgme-setup.json`
 - copy webgme-config `docker-compose cp webgme:/usr/app/config/config.webgme.js config/config.webgme.js`
+
+Alternatively, run the 'create_seed.bat(sh)' and follow instructions.

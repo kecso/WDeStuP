@@ -1,11 +1,7 @@
 # Node 14 on an Alpine
-FROM node:14
+FROM node:14-alpine
 
-RUN apt update
-RUN apt install -y software-properties-common sudo
-RUN add-apt-repository ppa:deadsnakes/ppa
-RUN apt install -y python3.9
-RUN apt install -y python3-pip
+RUN apk add --update python3 py3-pip git openssh openssl-dev
 
 # installing Python packages
 RUN pip3 install webgme-bindings

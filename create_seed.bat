@@ -1,5 +1,5 @@
 @echo off
-title Adding a new Python based plugin to your Design Studio
+title Adding a new Seed from project file to your Design Studio
 set /P id=What will be the Id of your seed (example:MyGreatSeed)?
 set /P input=What is the name of the project file you want to use (example:myproject.webgmex)?
 docker-compose cp %input% webgme:/usr/app/%input% 

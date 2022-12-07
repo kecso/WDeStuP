@@ -17,7 +17,7 @@ All of the following commands should be used from your main project directory (w
 - To **rebuild** the complete solution `docker-compose build` (and follow with the `docker-compose up -d` to restart the server)
 - To **debug** using the logs of the WebGME service `docker-compose logs webgme`
 - To **stop** the server just use `docker-compose stop`
-- To **enter** the WebGME container and use WebGME commands `docker-compose exec webgme /usr/bin` (you can exit by simply closing the command line with linux command 'exit') 
+- To **enter** the WebGME container and use WebGME commands `docker-compose exec webgme bash` (you can exit by simply closing the command line with linux command 'exit') 
 - To **clean** the host machine of unused (old version) images `docker system prune -f`
 ## Using WebGME commands to add components to your project
 In general, you can use any WebGME commands after you successfully entered the WebGME container. It is important to note that only the src directory is shared between the container and the host machine, so you need to additionally synchronize some files after finishing your changes inside the container! The following is few scenarios that frequently occur:
@@ -33,7 +33,7 @@ __Alternatively, run the 'add_npm_package.bat(sh)' and follow instructions.__
 Follow these steps to add a new plugin:
 - enter the container
 - for JS plugin: `npm run webgme new plugin MyPluginName`
-- for Python plugin: `npm run webgme new plugin --language Python MyPluginName`
+- for Python plugin: `npm run webgme new plugin -- --language Python MyPluginName`
 - exit container
 - copy webgme-setup.json `docker-compose cp webgme:/usr/app/webgme-setup.json webgme-setup.json`
 - copy webgme-config `docker-compose cp webgme:/usr/app/config/config.webgme.js config/config.webgme.js`
@@ -51,7 +51,7 @@ __Alternatively, run the 'create_visualizer.bat(sh)' and follow instructions.__
 ### Adding new seed to your DS
 Follow these steps to add a new seed based on an existing project in your server:
 - enter the container
-- `npm run webgme new seed MyProjectName -n MySeedName`
+- `npm run webgme new seed MyProjectName -- -n MySeedName`
 - exit container
 - copy webgme-setup.json `docker-compose cp webgme:/usr/app/webgme-setup.json webgme-setup.json`
 - copy webgme-config `docker-compose cp webgme:/usr/app/config/config.webgme.js config/config.webgme.js`

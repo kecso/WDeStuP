@@ -1,8 +1,6 @@
-# Node 14 on an Alpine
-FROM node:14-alpine
+FROM node:14-slim
 
-RUN apk add --no-cache --virtual .gyp make g++
-RUN apk add --update python3 py3-pip git openssh openssl-dev
+RUN apt-get update && apt-get install python3 python3-pip git openssh-client openssl libssl-dev -y
 
 # installing Python packages
 RUN pip3 install webgme-bindings
@@ -16,5 +14,6 @@ ADD . /usr/app
 RUN npm install  --unsafe-perm
 
 CMD ["npm", "start"]
+
 
 
